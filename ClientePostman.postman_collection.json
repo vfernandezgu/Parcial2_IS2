@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "f7d268c7-c6f7-4596-9391-99e9412b8de0",
+		"name": "ClientePostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30898292"
+	},
+	"item": [
+		{
+			"name": "registrarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8080/user/registerUser/10"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar el umbral inferior de una accion",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": "http://localhost:8080/query/newLowLim/1/1000/500"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar el umbral superior",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": "http://localhost:8080/query/newUppLim/1/1000/9999"
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar una accion de un usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/query/removeStock/1/1000"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar stocks de un Usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/query/stocks/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir una accion al Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3000,\r\n    \"name\": \"Nueva Accion\",\r\n    \"currentPrice\": 1000.0,\r\n    \"previousPrice\": 1000.0,\r\n    \"lowerThreshold\": 900.0,\r\n    \"upperThreshold\": 1100.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/query/addStock/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Accion por Id de un Usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/query/stock/1/1000"
+			},
+			"response": []
+		},
+		{
+			"name": "Ver las acciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/stock"
+			},
+			"response": []
+		}
+	]
+}
